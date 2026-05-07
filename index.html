@@ -111,6 +111,9 @@
   border-radius: var(--radius-lg);
   padding: 32px 28px;
   border-left: 3px solid var(--navy-pale);
+  min-width: 0;
+  word-break: break-all;
+  overflow-wrap: break-word;
 }
 .feature-number {
   font-family: var(--font-serif);
@@ -193,7 +196,7 @@
 
 @media (min-width: 768px) {
   .features-section { padding: 100px 48px; }
-  .features-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .features-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .hero-actions { flex-direction: row; max-width: 480px; }
   .hours-section { padding: 80px 48px; }
 }
