@@ -20,13 +20,15 @@
 .facility-item {
   background: var(--cream);
   border-radius: var(--radius-lg);
-  padding: 28px 24px;
+  padding: 24px 20px;
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 20px;
+  gap: 16px;
   align-items: start;
   border: 1px solid var(--gray-300);
+  min-width: 0;
 }
+.facility-item > div:last-child { min-width: 0; }
 .facility-number {
   font-family: var(--font-serif);
   font-size: 28px;
@@ -58,6 +60,7 @@
 <body>
 
 <!-- HEADER -->
+<div class="demo-banner">✦ デモサイト / Georji &amp; Co. 制作</div>
 <header class="site-header">
   <div class="header-top">
     <a href="index.html" class="logo">

@@ -68,13 +68,14 @@
   background: var(--warm-white);
   border: 1px solid var(--gray-300);
   border-radius: var(--radius-lg);
-  padding: 28px 24px;
+  padding: 24px 20px;
   display: flex;
-  gap: 20px;
+  gap: 16px;
   align-items: flex-start;
+  min-width: 0;
 }
 .service-icon {
-  width: 48px; height: 48px;
+  width: 44px; height: 44px;
   border-radius: var(--radius-md);
   background: var(--navy-pale);
   display: flex;
@@ -82,9 +83,10 @@
   justify-content: center;
   flex-shrink: 0;
 }
-.service-icon svg { width: 24px; height: 24px; stroke: var(--navy); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.service-name { font-family: var(--font-serif); font-size: 17px; color: var(--navy); font-weight: 500; margin-bottom: 8px; }
+.service-icon svg { width: 22px; height: 22px; stroke: var(--navy); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.service-name { font-family: var(--font-serif); font-size: 16px; color: var(--navy); font-weight: 500; margin-bottom: 6px; }
 .service-desc { font-size: 13px; color: var(--text-muted); line-height: 1.9; }
+.service-card > div:last-child { min-width: 0; flex: 1; }
 
 @media (min-width: 768px) {
   .services-grid { grid-template-columns: 1fr 1fr; }
@@ -94,6 +96,7 @@
 <body>
 
 <!-- HEADER -->
+<div class="demo-banner">✦ デモサイト / Georji &amp; Co. 制作</div>
 <header class="site-header">
   <div class="header-top">
     <a href="index.html" class="logo">

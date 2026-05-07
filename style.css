@@ -403,3 +403,8 @@ ul { list-style: none; }
   /* フッターナビの折り返し */
   .footer-nav a { padding: 6px 10px; font-size: 11px; }
 }
+
+/* ─── SCROLL OFFSET (アンカーリンクのヘッダー被り防止) ─── */
+[id] {
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
