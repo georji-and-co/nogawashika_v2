@@ -383,3 +383,23 @@ ul { list-style: none; }
   .page-hero { padding: 100px max(48px, calc(50vw - 560px)) 80px; text-align: left; }
   .breadcrumb { padding: 12px max(48px, calc(50vw - 560px)); }
 }
+
+/* ─── MOBILE SAFEGUARDS ─── */
+@media (max-width: 767px) {
+  /* テーブル・グリッド系のはみ出し防止 */
+  table { font-size: 12px; }
+  th, td { padding: 8px 6px !important; }
+
+  /* section系の横幅を確実に収める */
+  .section { padding: 64px 20px; }
+  .page-hero { padding: 48px 20px 40px; }
+
+  /* btn幅を画面に収める */
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* フッターナビの折り返し */
+  .footer-nav a { padding: 6px 10px; font-size: 11px; }
+}

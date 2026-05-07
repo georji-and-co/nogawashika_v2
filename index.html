@@ -133,7 +133,10 @@
 .feature-text { font-size: 13px; color: var(--text-muted); line-height: 2; }
 
 /* ─── SERVICES PREVIEW ─── */
-.services-preview { background: var(--cream); }
+.services-preview {
+  background: var(--cream);
+  padding: 80px 24px;
+}
 .services-tags {
   display: flex;
   flex-wrap: wrap;
@@ -175,16 +178,43 @@
   margin-bottom: 24px;
 }
 .today-label { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 8px; letter-spacing: 0.1em; }
-.today-time { font-family: var(--font-serif); font-size: 32px; color: white; font-weight: 500; margin-bottom: 4px; }
+.today-time {
+  font-family: var(--font-serif);
+  font-size: clamp(22px, 6vw, 32px);
+  color: white;
+  font-weight: 500;
+  margin-bottom: 4px;
+  word-break: break-all;
+}
 .today-note { font-size: 13px; color: rgba(255,255,255,0.6); }
-.hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; border-radius: var(--radius-md); overflow: hidden; }
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
 .hours-row { display: contents; }
-.hours-day, .hours-time { background: rgba(255,255,255,0.06); padding: 14px 16px; font-size: 13px; }
+.hours-day, .hours-time {
+  background: rgba(255,255,255,0.06);
+  padding: 12px 14px;
+  font-size: 12px;
+  min-width: 0;
+  word-break: break-all;
+}
 .hours-day { color: rgba(255,255,255,0.7); }
 .hours-time { color: white; text-align: right; }
 .hours-row.highlight .hours-day,
 .hours-row.highlight .hours-time { background: rgba(255,255,255,0.14); font-weight: 500; }
 .hours-row.closed .hours-time { color: rgba(255,255,255,0.35); }
+.holiday-note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  border-left: 2px solid var(--wood-light);
+  padding-left: 12px;
+  line-height: 1.8;
+}
 .holiday-note {
   margin-top: 20px;
   font-size: 12px;
@@ -199,10 +229,12 @@
   .features-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .hero-actions { flex-direction: row; max-width: 480px; }
   .hours-section { padding: 80px 48px; }
+  .services-preview { padding: 100px 48px; }
 }
 @media (min-width: 1024px) {
   .features-section { padding: 120px 48px; }
   .hours-section { padding: 100px max(48px, calc(50vw - 560px)); }
+  .services-preview { padding: 120px max(48px, calc(50vw - 560px)); }
 }
 </style>
 </head>
@@ -309,7 +341,7 @@
 </section>
 
 <!-- SERVICES PREVIEW -->
-<section class="services-preview section fade-in">
+<section class="services-preview fade-in">
   <div class="section-label">診療内容</div>
   <h2 class="section-title">お口のお悩み、<br>なんでもご相談を</h2>
   <div class="services-tags">
