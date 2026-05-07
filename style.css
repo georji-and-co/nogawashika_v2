@@ -34,7 +34,7 @@
   --shadow-soft: 0 2px 16px rgba(26,42,74,0.08);
   --shadow-card: 0 4px 32px rgba(26,42,74,0.12);
   --sticky-bar-h: 84px;
-  --header-h: 104px;
+  --header-h: 138px;
 }
 
 html {
@@ -56,10 +56,25 @@ img { display: block; width: 100%; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 
+/* ─── DEMO BANNER ─── */
+.demo-banner {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 300;
+  background: var(--wood);
+  color: white;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 10px 16px;
+  line-height: 1;
+}
+
 /* ─── HEADER ─── */
 .site-header {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 34px; left: 0; right: 0;
   z-index: 100;
   background: rgba(255,255,255,0.95);
   backdrop-filter: blur(12px);
@@ -339,7 +354,7 @@ ul { list-style: none; }
 
 /* ─── DESKTOP ─── */
 @media (min-width: 768px) {
-  :root { --header-h: 60px; }
+  :root { --header-h: 94px; }
   body { font-size: 16px; }
   .bottom-nav { display: none; }
   .header-nav {
