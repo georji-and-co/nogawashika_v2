@@ -352,6 +352,54 @@ ul { list-style: none; }
 }
 .fade-in.visible { opacity: 1; transform: none; }
 
+
+/* ─── SECTION PADDING (各ページ個別) ─── */
+.philosophy-section,
+.services-section,
+.facilities-section,
+.rooms-section,
+.access-section,
+.contact-section,
+.features-section,
+.services-preview {
+  padding: 64px 20px;
+}
+
+@media (min-width: 768px) {
+  .philosophy-section,
+  .services-section,
+  .facilities-section,
+  .rooms-section,
+  .access-section,
+  .contact-section,
+  .features-section,
+  .services-preview {
+    padding: 100px 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .philosophy-section,
+  .services-section,
+  .facilities-section,
+  .rooms-section,
+  .access-section,
+  .contact-section,
+  .features-section,
+  .services-preview {
+    padding: 120px max(48px, calc(50vw - 560px));
+  }
+}
+
+/* ─── CARD OVERFLOW FIX ─── */
+/* flexカード内のテキスト列が必ず縮むようにする */
+.service-card > div:not(.service-icon),
+.facility-item > div:not(.facility-number),
+.contact-option > div:not(.contact-option-icon):not(.contact-option-btn) {
+  min-width: 0;
+  flex: 1;
+}
+
 /* ─── DESKTOP ─── */
 @media (min-width: 768px) {
   :root { --header-h: 94px; }
