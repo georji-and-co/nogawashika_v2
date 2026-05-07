@@ -101,7 +101,10 @@
 }
 
 /* ─── FEATURES ─── */
-.features-section { background: var(--warm-white); }
+.features-section {
+  background: var(--warm-white);
+  padding: 80px 24px;
+}
 .features-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
 .feature-card {
   background: var(--cream);
@@ -189,11 +192,13 @@
 }
 
 @media (min-width: 768px) {
+  .features-section { padding: 100px 48px; }
   .features-grid { grid-template-columns: 1fr 1fr 1fr; }
   .hero-actions { flex-direction: row; max-width: 480px; }
   .hours-section { padding: 80px 48px; }
 }
 @media (min-width: 1024px) {
+  .features-section { padding: 120px 48px; }
   .hours-section { padding: 100px max(48px, calc(50vw - 560px)); }
 }
 </style>
@@ -277,7 +282,7 @@
 </section>
 
 <!-- FEATURES -->
-<section class="features-section section fade-in">
+<section class="features-section fade-in">
   <div class="section-label">当院の特徴</div>
   <h2 class="section-title">選ばれる3つの理由</h2>
   <div class="features-grid">
