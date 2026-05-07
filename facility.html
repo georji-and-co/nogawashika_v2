@@ -40,20 +40,26 @@
 .facility-name { font-size: 16px; font-weight: 500; color: var(--navy); margin-bottom: 8px; }
 .facility-benefit { font-size: 13px; color: var(--text-muted); line-height: 1.9; }
 
-.rooms-section { background: var(--wood-pale); }
+.rooms-section { background: var(--wood-pale); padding: 64px 20px; }
 .rooms-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
 .room-card {
   background: var(--warm-white);
   border-radius: var(--radius-lg);
-  padding: 28px 24px;
+  padding: 24px 20px;
   border-left: 3px solid var(--wood-light);
+  min-width: 0;
+  overflow: hidden;
 }
-.room-name { font-family: var(--font-serif); font-size: 18px; color: var(--navy); font-weight: 500; margin-bottom: 10px; }
-.room-desc { font-size: 13px; color: var(--text-muted); line-height: 2; }
+.room-name { font-family: var(--font-serif); font-size: 17px; color: var(--navy); font-weight: 500; margin-bottom: 10px; }
+.room-desc { font-size: 13px; color: var(--text-muted); line-height: 2; word-break: break-all; overflow-wrap: break-word; }
 
 @media (min-width: 768px) {
   .facilities-list { grid-template-columns: 1fr 1fr; }
   .rooms-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .rooms-section { padding: 100px 48px; }
+}
+@media (min-width: 1024px) {
+  .rooms-section { padding: 120px max(48px, calc(50vw - 560px)); }
 }
 </style>
 </head>
